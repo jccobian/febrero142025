@@ -21,11 +21,11 @@
         }
         h1 {
             color: #fff;
-            font-size: 3.5vw;
+            font-size: 3vw;
             font-weight: bold;
             animation: fadeIn 2s ease-in-out;
             position: absolute;
-            top: 3vh;
+            top: 5vh;
             width: 100%;
         }
         p {
@@ -33,21 +33,22 @@
             font-size: 2vw;
             max-width: 80%;
             margin: auto;
+            line-height: 1.6;
             animation: slideIn 3s ease-in-out;
             position: absolute;
-            top: 12vh;
+            top: 14vh;
             left: 50%;
             transform: translateX(-50%);
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .heart {
-            color: #fff;
-            font-size: 6vw;
-            animation: pulse 1.5s infinite;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 15vw;
             position: absolute;
-            top: 25vh; /* 💖 Ajustado para que no tape el texto */
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Moverlo al fondo */
         }
         .photo-frame {
             position: absolute;
@@ -76,11 +77,6 @@
             from { transform: translateY(-50px); }
             to { transform: translateY(0); }
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
         @keyframes floatAround {
             0% { transform: translate(0, 0); opacity: 1; }
             25% { transform: translate(5vw, -4vw); opacity: 0.9; }
@@ -90,7 +86,7 @@
         }
 
         /* Distribución adaptable */
-        .photo-frame:nth-child(1) { top: 32vh; left: 10vw; animation-delay: 0s; }
+        .photo-frame:nth-child(1) { top: 35vh; left: 10vw; animation-delay: 0s; }
         .photo-frame:nth-child(2) { top: 38vh; left: 75vw; animation-delay: 0.5s; }
         .photo-frame:nth-child(3) { top: 42vh; left: 40vw; animation-delay: 1s; }
         .photo-frame:nth-child(4) { top: 50vh; left: 85vw; animation-delay: 1.5s; }
@@ -104,16 +100,16 @@
         /* Ajustes responsivos */
         @media (max-width: 768px) {
             h1 {
-                font-size: 6vw;
+                font-size: 5vw;
             }
             p {
                 font-size: 4vw;
                 max-width: 90%;
-                top: 15vh;
+                top: 18vh;
             }
             .heart {
-                font-size: 8vw;
-                top: 28vh;
+                font-size: 40vw;
+                top: 45%;
             }
             .photo-frame {
                 width: 15vw;
@@ -122,7 +118,6 @@
                 max-height: 160px;
             }
         }
-
     </style>
 </head>
 <body>
