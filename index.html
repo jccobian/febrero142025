@@ -21,7 +21,7 @@
         }
         h1 {
             color: #fff;
-            font-size: 3vw;
+            font-size: 3.5vw;
             font-weight: bold;
             animation: fadeIn 2s ease-in-out;
             position: absolute;
@@ -30,23 +30,24 @@
         }
         p {
             color: #fff;
-            font-size: 1.8vw;
+            font-size: 2vw;
             max-width: 80%;
             margin: auto;
             animation: slideIn 3s ease-in-out;
             position: absolute;
-            top: 10vh;
+            top: 12vh;
             left: 50%;
             transform: translateX(-50%);
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .heart {
             color: #fff;
-            font-size: 5vw;
+            font-size: 6vw;
             animation: pulse 1.5s infinite;
             position: absolute;
-            top: 20vh;
-            width: 100%;
+            top: 25vh; /* 💖 Ajustado para que no tape el texto */
+            left: 50%;
+            transform: translateX(-50%);
         }
         .photo-frame {
             position: absolute;
@@ -89,13 +90,13 @@
         }
 
         /* Distribución adaptable */
-        .photo-frame:nth-child(1) { top: 25vh; left: 10vw; animation-delay: 0s; }
-        .photo-frame:nth-child(2) { top: 30vh; left: 75vw; animation-delay: 0.5s; }
-        .photo-frame:nth-child(3) { top: 35vh; left: 40vw; animation-delay: 1s; }
-        .photo-frame:nth-child(4) { top: 42vh; left: 85vw; animation-delay: 1.5s; }
-        .photo-frame:nth-child(5) { top: 55vh; left: 5vw; animation-delay: 2s; }
-        .photo-frame:nth-child(6) { top: 60vh; left: 50vw; animation-delay: 2.5s; }
-        .photo-frame:nth-child(7) { top: 72vh; left: 30vw; animation-delay: 3s; }
+        .photo-frame:nth-child(1) { top: 32vh; left: 10vw; animation-delay: 0s; }
+        .photo-frame:nth-child(2) { top: 38vh; left: 75vw; animation-delay: 0.5s; }
+        .photo-frame:nth-child(3) { top: 42vh; left: 40vw; animation-delay: 1s; }
+        .photo-frame:nth-child(4) { top: 50vh; left: 85vw; animation-delay: 1.5s; }
+        .photo-frame:nth-child(5) { top: 58vh; left: 5vw; animation-delay: 2s; }
+        .photo-frame:nth-child(6) { top: 62vh; left: 50vw; animation-delay: 2.5s; }
+        .photo-frame:nth-child(7) { top: 70vh; left: 30vw; animation-delay: 3s; }
         .photo-frame:nth-child(8) { top: 78vh; left: 5vw; animation-delay: 3.5s; }
         .photo-frame:nth-child(9) { top: 85vh; left: 65vw; animation-delay: 4s; }
         .photo-frame:nth-child(10) { top: 90vh; left: 45vw; animation-delay: 4.5s; }
@@ -103,14 +104,16 @@
         /* Ajustes responsivos */
         @media (max-width: 768px) {
             h1 {
-                font-size: 5vw;
+                font-size: 6vw;
             }
             p {
-                font-size: 3.5vw;
+                font-size: 4vw;
                 max-width: 90%;
+                top: 15vh;
             }
             .heart {
-                font-size: 6vw;
+                font-size: 8vw;
+                top: 28vh;
             }
             .photo-frame {
                 width: 15vw;
